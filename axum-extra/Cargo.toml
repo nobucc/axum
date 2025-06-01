@@ -60,9 +60,9 @@ mime = "0.3"
 pin-project-lite = "0.2"
 rustversion = "1.0.9"
 serde = "1.0"
-tower = { version = "0.5.2", default-features = false, features = ["util"] }
-tower-layer = "0.3"
-tower-service = "0.3"
+tower = { git = "https://github.com/nobucc/tower.git", branch = "experimental", default-features = false, features = ["util"] }
+tower-layer = { git = "https://github.com/nobucc/tower.git", branch = "experimental" }
+tower-service = { git = "https://github.com/nobucc/tower.git", branch = "experimental" }
 
 # optional dependencies
 axum-macros = { path = "../axum-macros", version = "0.5.0", optional = true }
@@ -76,7 +76,7 @@ prost = { version = "0.13", optional = true }
 serde_html_form = { version = "0.2.0", optional = true }
 serde_json = { version = "1.0.71", optional = true }
 serde_path_to_error = { version = "0.1.8", optional = true }
-tokio = { version = "1.19", optional = true }
+tokio = { git = "https://github.com/nobucc/tokio.git", branch = "experimental", optional = true }
 tokio-stream = { version = "0.1.9", optional = true }
 tokio-util = { version = "0.7", optional = true }
 tracing = { version = "0.1.37", default-features = false, optional = true }
@@ -89,9 +89,9 @@ hyper = "1.0.0"
 reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "multipart"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0.71"
-tokio = { version = "1.14", features = ["full"] }
-tower = { version = "0.5.2", features = ["util"] }
-tower-http = { version = "0.6.0", features = ["map-response-body", "timeout"] }
+tokio = { git = "https://github.com/nobucc/tokio.git", branch = "experimental", features = ["full"] }
+tower = { git = "https://github.com/nobucc/tower.git", branch = "experimental", features = ["util"] }
+tower-http = { git = "https://github.com/nobucc/tower-http.git", branch = "experimental", features = ["map-response-body", "timeout"] }
 tracing-subscriber = "0.3.19"
 
 [lints]

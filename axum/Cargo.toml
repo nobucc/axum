@@ -65,24 +65,24 @@ pin-project-lite = "0.2.7"
 rustversion = "1.0.9"
 serde = "1.0"
 sync_wrapper = "1.0.0"
-tower = { version = "0.5.2", default-features = false, features = ["util"] }
-tower-layer = "0.3.2"
-tower-service = "0.3"
+tower = { git = "https://github.com/nobucc/tower.git", branch = "experimental", default-features = false, features = ["util"] }
+tower-layer = { git = "https://github.com/nobucc/tower.git", branch = "experimental" }
+tower-service = { git = "https://github.com/nobucc/tower.git", branch = "experimental" }
 
 # optional dependencies
 axum-macros = { path = "../axum-macros", version = "0.5.0", optional = true }
 base64 = { version = "0.22.1", optional = true }
 form_urlencoded = { version = "1.1.0", optional = true }
-hyper = { version = "1.1.0", optional = true }
-hyper-util = { version = "0.1.3", features = ["tokio", "server", "service"], optional = true }
+hyper = { git = "https://github.com/nobucc/hyper.git", branch = "experimental", optional = true }
+hyper-util = { git = "https://github.com/nobucc/hyper-util.git", branch = "experimental", features = ["tokio", "server", "service"], optional = true }
 multer = { version = "3.0.0", optional = true }
 reqwest = { version = "0.12", optional = true, default-features = false, features = ["json", "stream", "multipart"] }
 serde_json = { version = "1.0", features = ["raw_value"], optional = true }
 serde_path_to_error = { version = "0.1.8", optional = true }
 serde_urlencoded = { version = "0.7", optional = true }
 sha1 = { version = "0.10", optional = true }
-tokio = { package = "tokio", version = "1.44", features = ["time"], optional = true }
-tokio-tungstenite = { version = "0.26.0", optional = true }
+tokio = { git = "https://github.com/nobucc/tokio.git", branch = "experimental", features = ["time"], optional = true }
+tokio-tungstenite = { git = "https://github.com/nobucc/tokio-tungstenite.git", branch = "experimental", optional = true }
 tracing = { version = "0.1", default-features = false, optional = true }
 
 [dependencies.tower-http]
@@ -124,23 +124,24 @@ features = [
 anyhow = "1.0"
 axum-extra = { path = "../axum-extra", features = ["typed-header"] }
 axum-macros = { path = "../axum-macros", features = ["__private"] }
-hyper = { version = "1.1.0", features = ["client"] }
+hyper = { git = "https://github.com/nobucc/hyper.git", branch = "experimental", features = ["client"] }
 quickcheck = "1.0"
 quickcheck_macros = "1.0"
 reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "multipart"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = { version = "1.0", features = ["raw_value"] }
 time = { version = "0.3", features = ["serde-human-readable"] }
-tokio = { package = "tokio", version = "1.44.2", features = ["macros", "rt", "rt-multi-thread", "net", "test-util"] }
+tokio = { git = "https://github.com/nobucc/tokio.git", branch = "experimental", features = ["macros", "rt", "rt-multi-thread", "net", "test-util"] }
 tokio-stream = "0.1"
-tokio-tungstenite = "0.26.0"
+tokio-tungstenite = { git = "https://github.com/nobucc/tokio-tungstenite.git", branch = "experimental" }
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["json"] }
 uuid = { version = "1.0", features = ["serde", "v4"] }
 
 [dev-dependencies.tower]
 package = "tower"
-version = "0.5.2"
+git = "https://github.com/nobucc/tower.git"
+branch = "experimental"
 features = [
     "util",
     "timeout",
